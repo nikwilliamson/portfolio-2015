@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'brandon-grotesque', helvetica, arial, sans-serif;
+}
+
+body {
+    background-color: rgba(201, 75, 12, 1);
+}
+
+header {
+    display: flex;
+    display: -webkit-flex;
+    height: 100px;
+    color: rgba(255, 255, 255, 1);
+    padding: 18px 36px 18px 18px;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+header svg {
+    display: flex;
+    display: -webkit-flex;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+li {
+    margin-left: 36px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    -webkit-transform-origin: center bottom;
+    -webkit-transform-style: preserve-3d;
+}
+
+li.active {
+    font-weight: 600;
+}
+
+li:hover {
+    -webkit-animation: wobble .4s ease-in-out;
+}
+
+@-webkit-keyframes wobble {
+    0% {
+        -webkit-transform: rotate3d(0, 0, 0, 0);
+    }
+    50% {
+        -webkit-transform: rotate3d(90, 0, 0, -40deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 0, 0);
+    }
+}
+
+.logo-front {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
+    width: 64px;
+    height: 64px;
+}
+
+.boltspin {
+    -webkit-transform-origin: 50% 50%;
+
+    -webkit-animation: boltspin 5s ease-in-out;
+}
+
+@-webkit-keyframes boltspin {
+    from {
+        -webkit-transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(720deg);
+    }
+}
+
+.logo-n,
+.logo-w,
+.logo-bolt,
+.logo-circle {
+    fill: white;
+}
